@@ -25,7 +25,7 @@ SECRET_KEY = 'vo0e&##+s=5v%x0mi!&y6(4%&^&1cf!gd&uns_)$uzmak2(-rl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
