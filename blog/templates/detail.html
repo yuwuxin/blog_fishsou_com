@@ -1,0 +1,205 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="keywords" content="增加自定义" />
+<meta name="description" content="Dede网站频道变多之后都会发觉默认的几个自定义属性不够用了，想自己增加自定义属性。今天就为大家提供自定义属性的SQL语句。 第一步：在DEDECMS后台左栏点击系统； 第二步：选择系" />
+<title>Dede两句代码增加自定义属性-响应式新闻技术博客类织梦模板(自适应手机端)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="static/images/favicon.ico" />
+<link rel='stylesheet' id='_common-css'  href='/include/FCKeditor/editor/css/fck_editorarea.css' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" media="all" href="static/css/style.css" />
+<link rel="stylesheet" type="text/css"  href="static/css/font-awesome.min.css"/>
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="static/js/yycm.js"></script>
+<link href="/include/kindeditor/plugins/runCode/runCode.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/include/kindeditor/plugins/runCode/zztuku_runCode.js"></script>
+<script language="javascript" type="text/javascript" src="/include/js/dedeajax2.js"></script>
+</head>
+<body>
+{% include 'header.html' %}
+
+<div class="wrap" >
+  <div class="main">
+    <div class="article">
+      <div class="map"><span> 当前位置：<a href='/'>主页</a> > <a href='/cms/'>Cms文章</a> > 正文 </span> </div>
+      <div class="title">
+        <h1>Dede两句代码增加自定义属性</h1>
+        <div class="subtitle"> <span><i class="fa fa-clock-o"></i>06-05</span><span><i class="fa fa-eye"></i> <script src="/plus/count.php?view=yes&aid=12&mid=1"type='text/javascript' language="javascript"></script></span><span><i class="fa fa-folder-o"></i> <a href="" rel="category tag">Cms文章</a> </span><span> <i class="fa fa-tags"></i> </span> </div>
+      </div>
+      <div class="subblock"> 
+        <script src=/d/js/acmsd/thea6.js></script> 
+      </div>
+      <div class="article_content">
+        <p><p>&nbsp;<span style="color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px; text-indent: 30px;">Dede网站频道变多之后都会发觉默认的几个自定义属性不够用了，想自己增加自定义属性。今天就为大家提供自定义属性的SQL语句。</span></p>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第一步：在DEDECMS后台左栏点击&ldquo;系统&rdquo;；</div>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第二步：选择&ldquo;系统&rdquo;菜单下的&ldquo;SQL命令行工具&rdquo;；</div>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第三步：输入如下代码点击执行：</div>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
+<pre style="box-sizing: border-box; font-family: 'courier new'; font-size: 12px; width: 724.672px; margin-top: 20px; margin-bottom: 20px; padding-right: 20px; padding-left: 20px; line-height: 20px; color: rgb(248, 248, 212); word-wrap: break-word; border: none; border-radius: 4px; font-stretch: normal;"><ol class="dp-xml" style="box-sizing: border-box; margin-bottom: 30px; margin-left: 10px; border-left-color: rgb(255, 95, 83); color: rgb(92, 92, 92);"><li class="alt" style="box-sizing: border-box; color: rgb(255, 255, 255);"><span style="box-sizing: border-box;">insert&nbsp;into&nbsp;`dede_arcatt`(sortid,att,attname)&nbsp;values(9,'d','特推');&nbsp;&nbsp;</span></li></ol></pre>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第四步：在输入点击执行：</div>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
+<pre style="box-sizing: border-box; font-family: 'courier new'; font-size: 12px; width: 724.672px; margin-top: 20px; margin-bottom: 20px; padding-right: 20px; padding-left: 20px; line-height: 20px; color: rgb(248, 248, 212); word-wrap: break-word; border: none; border-radius: 4px; font-stretch: normal;"><ol class="dp-xml" style="box-sizing: border-box; margin-bottom: 30px; margin-left: 10px; border-left-color: rgb(255, 95, 83); color: rgb(92, 92, 92);"><li class="alt" style="box-sizing: border-box; color: rgb(255, 255, 255);"><span style="box-sizing: border-box;">alter&nbsp;table&nbsp;`dede_archives`&nbsp;modify&nbsp;`flag`&nbsp;set&nbsp;('h','c','p','f','s','j','a','b','d')&nbsp;default&nbsp;NULL;&nbsp;&nbsp;</span></li></ol></pre>
+<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">
+<div style="box-sizing: border-box;">&nbsp;</div>
+<div style="box-sizing: border-box;">需要说明的是：</div>
+<div style="box-sizing: border-box;">&nbsp;</div>
+<div style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp;代码第1行：values(9,'d','特推') 是根据我们需要自行定义的，其中9是sortid的值，是不可重复的，也就是每添加一个自定义属性，sortid的值就应该递增到10,11,12...，以此类推！d是alt的值，是自定义属性的标记，与已存在的标记符号不能重复，例如已存在&lsquo;p'属性了，就不能再用&rsquo;p&lsquo;或者&rsquo;po&lsquo;之类的，一个字符都不能重复，否则操作的时候会出现重复属性。&ldquo;评论&rdquo;是中文名称，是方便人们直观地勒戒自定义属性的含义的，可以根据需要改为&ldquo;网络&rdquo;、&ldquo;新闻头条&rdquo;等。</div>
+<div style="box-sizing: border-box;">&nbsp;</div>
+<div style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp;代码第2行：set ('c','h','p','f','s','j','a','b','d')，括号中的字母对应已存在的标记符号和您需要添加的标记符号，并按顺序录入，不得改变先后顺序。例如，d排序第9位，则对应第一行代码中添加的自定义属性&ldquo;&ldquo;特推d&rdquo;。</div>
+<div style="box-sizing: border-box;">&nbsp;</div>
+<div style="box-sizing: border-box;">提示：如果要修改自定义属性的提示，可以在系统---&gt;自定义属性中修改。</div>
+</div></p>
+      </div>
+      <div class='pagination'></div>
+      <div class="subblock"> 
+        <script src=/d/js/acmsd/thea8.js></script> 
+      </div>
+      <div class="postcopyright">
+        <p><strong>版权保护: </strong> 本文由 主页 原创，转载请保留链接: <a href="/cms/12.html" title="Dede两句代码增加自定义属性"> /cms/12.html</a></p>
+      </div>
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+      <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","qzone","tsina","bdysc","weixin","renren","tqq","tieba","douban","bdhome","sqq","mail","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> 
+    </div>
+    <div class="clear"></div>
+    <div class="con_pretext">
+      <ul>
+        <li class="first">上一篇：<a href='/cms/11.html'>Dede简单搬家</a>  </li>
+        <li class="last">下一篇：没有了 </li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  
+<div class="sider">
+  <div class="right">
+    <div class="author">
+      <div class="topauthor"> <img alt="" src="static/images/avatar.jpeg" class="avatar avatar-100 photo" height="100" width="100"> <span class="intag">博客主人</span><span class="names">YeLongCu</span></br>
+        <span class="talk"> 男，文化程度不高性格有点犯二，已经20来岁至今未婚，闲着没事喜欢研究各种代码，资深技术宅。 </span> </div>
+      <span class="bot"></span> </div>
+    <div class="butauthor author">
+      <li> <span class="bignum" ID="bignum1"></span>文章总数 </li>
+      <li> <span class="bignum">1330</span>访问次数 </li>
+      <li> <span class="bignum" ID="days"></span>建站天数 </li>
+    </div>
+    <div class="subblock"> <img src="static/images/3cd871e89f2f6eb8a3a032653a4f8018.jpg"> </div>
+    <div class="subblock">
+      <h3>推荐文章</h3>
+      <ul>
+        <li>
+          <div class="sideshow"><a href="/cms/12.html" target="_ablank"  title="Dede两句代码增加自定义属性">  </a> <a href="/cms/12.html" target="_ablank"  title="Dede两句代码增加自定义属性"> Dede两句代码增加自定义属性 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/11.html" target="_ablank"  title="Dede简单搬家">  </a> <a href="/cms/11.html" target="_ablank"  title="Dede简单搬家"> Dede简单搬家 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/10.html" target="_ablank"  title="Html技巧-简单的把Table转成Div">  </a> <a href="/cms/10.html" target="_ablank"  title="Html技巧-简单的把Table转成Div"> Html技巧-简单的把Table转成Div </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/9.html" target="_ablank"  title="dede简单点赞功能开发">  </a> <a href="/cms/9.html" target="_ablank"  title="dede简单点赞功能开发"> dede简单点赞功能开发 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/8.html" target="_ablank"  title="dede去后台验证码">  </a> <a href="/cms/8.html" target="_ablank"  title="dede去后台验证码"> dede去后台验证码 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="subblock"> <img src="static/images/3cd871e89f2f6eb8a3a032653a4f8018.jpg"> </div>
+    <div class="subblock">
+      <h3>热门文章</h3>
+      <ul>
+        <li>
+          <div class="sideshow"><a href="/cms/12.html" target="_ablank"  title="Dede两句代码增加自定义属性">  </a> <a href="/cms/12.html" target="_ablank"  title="Dede两句代码增加自定义属性"> Dede两句代码增加自定义属性 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/11.html" target="_ablank"  title="Dede简单搬家">  </a> <a href="/cms/11.html" target="_ablank"  title="Dede简单搬家"> Dede简单搬家 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/10.html" target="_ablank"  title="Html技巧-简单的把Table转成Div">  </a> <a href="/cms/10.html" target="_ablank"  title="Html技巧-简单的把Table转成Div"> Html技巧-简单的把Table转成Div </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/9.html" target="_ablank"  title="dede简单点赞功能开发">  </a> <a href="/cms/9.html" target="_ablank"  title="dede简单点赞功能开发"> dede简单点赞功能开发 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+<li>
+          <div class="sideshow"><a href="/cms/8.html" target="_ablank"  title="dede去后台验证码">  </a> <a href="/cms/8.html" target="_ablank"  title="dede去后台验证码"> dede去后台验证码 </a> <span class="datetime"> 2016/06/05 </span> </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="subblock"> <img src="static/images/3cd871e89f2f6eb8a3a032653a4f8018.jpg"> </div>
+    <div class="subblock">
+      <h3>标签</h3>
+      <ul class="tag_cloud">
+         <a href="/plus/search.php?q=增加自定义"  target="_blank" title="增加自定义" class="tag-link-9" >增加自定义</a> 
+      </ul>
+    </div>
+    <div class="subblock linkcat">
+      <h3>友情链接</h3>
+      <ul>
+        
+        <li><a href='http://www.baidu.com/' target='_blank'>百度一下</a> </li>
+        
+        <li><a href='http://www.taobao.com/' target='_blank'>淘宝</a> </li>
+        
+        <li><a href='http://www.adashuo.com/' target='_blank'>创业找项目</a> </li>
+        
+        <li><a href='http://www.sucai58.com/' target='_blank'>建站素材</a> </li>
+        
+      </ul>
+    </div>
+    <ul class="widgets">
+    </ul>
+  </div>
+</div>
+<script>
+var s1 = '2016-05-24';//设置为你的建站时间
+s1 = new Date(s1.replace(/-/g, "/"));
+s2 = new Date();
+var days = s2.getTime() - s1.getTime();
+var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+document.getElementById('days').innerHTML = number_of_days;
+</script> 
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function showsectime() {
+var birthDay =NewDate("2016-05-29");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000;
+var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60);
+var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("bignum").innerHTML = daysold;
+setTimeout(showsectime, 1000);
+}
+showsectime();
+</script> 
+<script type="text/javascript">
+var a = 1;
+var b = 6;
+var c = 2;
+var las_number = a + b+ c;
+document.getElementById("bignum1").innerHTML = Number(a) + Number(b)+ Number(c);
+</script> </div>
+
+{% include "footer.html"%}
+
+</body>
+</html>
