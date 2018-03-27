@@ -1,28 +1,20 @@
 from django.contrib import admin
-from blog.models import article
-
 
 # Register your models here.
+from .models import Article
+from .models import Category
+from .models import Member
+from .models import AdPosition
+
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = [
-        'title',
-        'cover_img',
-        'category_id',
-        'user_id',
-        'user_name',
-        'click_count',
-        'comment_count',
-        'praise_count',
-        'sort',
-        'is_show',
-        'is_hot',
-        'is_top',
-        'is_essence',
-        'description',
-        'content',
-        'created_at'
-    ]
+    list_display = ('title', 'pub_date', 'update_time',)
 
 
-admin.site.register(article, ArticleAdmin)
+admin.site.register(Article, ArticleAdmin)
+
+admin.site.register(Category)
+
+admin.site.register(Member)
+
+admin.site.register(AdPosition)
