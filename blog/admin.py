@@ -12,7 +12,7 @@ class ArticleAdmin(admin.ModelAdmin):
         'title',
         'cover_img',
         'category',
-        'user_id',
+        'user',
         'click_count',
         'comment_count',
         'praise_count',
