@@ -64,3 +64,39 @@ class AdPosition(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Tag(models.Model):
+    title = models.CharField(u'名称', max_length=256)
+    description = models.TextField(u'描述')
+    created_at = models.DateTimeField(u'创建时间', auto_now_add=True, editable=True)
+    updated_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Link(models.Model):
+    title = models.CharField(u'名称', max_length=256)
+    url = models.CharField(u'网址', max_length=256)
+    sort = models.PositiveIntegerField(u'排序', default=0)
+    is_show = models.BooleanField(u'是否显示', default=1)
+    description = models.TextField(u'描述')
+    created_at = models.DateTimeField(u'创建时间', auto_now_add=True, editable=True)
+    updated_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Message(models.Model):
+    title = models.CharField(u'标题', max_length=256)
+    user = models.CharField(u'用户', max_length=256)
+    sort = models.PositiveIntegerField(u'排序', default=0)
+    is_show = models.BooleanField(u'是否显示', default=1)
+    description = models.TextField(u'留言内容')
+    created_at = models.DateTimeField(u'创建时间', auto_now_add=True, editable=True)
+    updated_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
+
+    def __str__(self):
+        return self.title
