@@ -8,7 +8,17 @@ from .models import AdPosition
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date', 'update_time',)
+    list_display = (
+        'title',
+        'cover_img',
+        'category',
+        'user_id',
+        'click_count',
+        'comment_count',
+        'praise_count',
+        'click_count',
+        'is_show',
+    )
 
 
 admin.site.register(Article, ArticleAdmin)
