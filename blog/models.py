@@ -38,7 +38,7 @@ class Category(models.Model):
 class Member(models.Model):
     user_name = models.CharField(u'用户名', max_length=256)
     other_name = models.CharField(u'昵称', default='', max_length=256)
-    email = models.CharField(u'邮件', default='', max_length=100)
+    email = models.EmailField(u'邮件', default='', max_length=100)
     avatar = models.CharField(u'头像', default='', max_length=100)
     password = models.CharField(u'密码', default='', max_length=100)
     salt = models.CharField(u'掩码', default='', max_length=100)
