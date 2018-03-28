@@ -1,13 +1,14 @@
 from django.db import models
+import django
 
 
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(u'标题', max_length=150)
     cover_img = models.ImageField(u'图片封面', max_length=200, default='', null=True)
-    category = models.ForeignKey('Category', default=0, on_delete=models.CASCADE)
-    user = models.ForeignKey('Member', on_delete=models.CASCADE, default=0)
+    # category = models.ForeignKey('Category', default=0, on_delete=django.db.models.deletion.CASCADE)
     click_count = models.PositiveIntegerField(u'点击数', default=0)
+    user_id = models.PositiveIntegerField(u'点击数', default=0)
     comment_count = models.PositiveIntegerField(u'点击数', default=0)
     praise_count = models.PositiveIntegerField(u'点击数', default=0)
     sort = models.PositiveSmallIntegerField(u'点击数', default=0)
@@ -47,7 +48,7 @@ class Member(models.Model):
     sex = models.CharField(u'性别', default=0, max_length=100)
     birthday = models.CharField(u'生日', default=0, max_length=100)
     exp_value = models.CharField(u'经验', default=0, max_length=100)
-    description = models.TextField(u'描述', default='', max_length=200)
+    description = models.TextField(u'描述',default='',max_length=200)
     created_at = models.DateTimeField(u'创建时间', auto_now_add=True, editable=True)
     updated_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
 

@@ -11,13 +11,11 @@ class ArticleAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'cover_img',
-        'category',
-        'user',
+        'user_id',
         'click_count',
         'comment_count',
         'praise_count',
         'click_count',
-        'is_show',
     )
 
 
