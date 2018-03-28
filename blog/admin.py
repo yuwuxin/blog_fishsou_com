@@ -15,7 +15,9 @@ class ArticleAdmin(admin.ModelAdmin):
         'click_count',
         'comment_count',
         'praise_count',
-        'click_count',
+        'sort',
+        'is_show',
+        'created_at',
     )
 
 
