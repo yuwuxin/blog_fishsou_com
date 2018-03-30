@@ -23,6 +23,13 @@ class ArticleAdmin(admin.ModelAdmin):
         'created_at',
     )
 
+    class Media:
+        js = (
+            'js/kindeditor/kindeditor-all.js',
+            'js/kindeditor/lang/zg-CN.js',
+            'js/kindeditor/config.js',
+        )
+
 
 admin.site.register(Article, ArticleAdmin)
 
