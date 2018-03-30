@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from blog.models import Article
+
+
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    title = Article.objects.get(id='')
+    return render(request, 'index.html', {'title': title})
 
 
 def list(request):
