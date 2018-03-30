@@ -26,17 +26,74 @@ class ArticleAdmin(admin.ModelAdmin):
 
 admin.site.register(Article, ArticleAdmin)
 
-admin.site.register(Category)
 
-admin.site.register(Member)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'url',
+        'sort',
+        'is_show',
+        'created_at'
+    )
 
-admin.site.register(AdPosition)
+
+admin.site.register(Category, CategoryAdmin)
+
+
+class MemberAdmin(admin.ModelAdmin):
+    list_display = (
+        'user_name',
+        'other_name',
+        'avatar',
+        'sex',
+        'email',
+        'qq',
+        'mobile_phone',
+        'cps_type',
+        'exp_value',
+        'created_at'
+    )
+
+
+admin.site.register(Member, MemberAdmin)
+
+
+class AdPositionAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'cover_img',
+        'sort',
+        'is_show',
+        'created_at'
+    )
+
+
+admin.site.register(AdPosition, AdPositionAdmin)
 
 admin.site.register(Message)
 
-admin.site.register(Tag)
 
-admin.site.register(Link)
+class TagAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'cover_img',
+        'sort',
+        'is_show',
+        'created_at'
+    )
 
 
+admin.site.register(Tag, TagAdmin)
 
+
+class LinkAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'url',
+        'sort',
+        'is_show',
+        'created_at'
+    )
+
+
+admin.site.register(Link, LinkAdmin)

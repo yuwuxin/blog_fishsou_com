@@ -27,6 +27,9 @@ class Article(models.Model):
 
 class Category(models.Model):
     title = models.CharField(u'标题', max_length=256)
+    url = models.CharField(u'地址', null=True, max_length=256)
+    sort = models.PositiveIntegerField(u'排序', default=0)
+    is_show = models.BooleanField(u'是否显示', default=1)
     description = models.TextField(u'描述')
     created_at = models.DateTimeField(u'发表时间', auto_now_add=True, editable=True)
     update_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
@@ -58,6 +61,9 @@ class Member(models.Model):
 
 class AdPosition(models.Model):
     title = models.CharField(u'名称', max_length=256)
+    cover_img = models.ImageField(u'广告图', max_length=200, default='', null=True)
+    sort = models.PositiveIntegerField(u'排序', default=0)
+    is_show = models.BooleanField(u'是否显示', default=1)
     description = models.TextField(u'描述')
     created_at = models.DateTimeField(u'创建时间', auto_now_add=True, editable=True)
     updated_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
@@ -68,6 +74,9 @@ class AdPosition(models.Model):
 
 class Tag(models.Model):
     title = models.CharField(u'名称', max_length=256)
+    cover_img = models.ImageField(u'封面', max_length=200, default='', null=True)
+    sort = models.PositiveIntegerField(u'排序', default=0)
+    is_show = models.BooleanField(u'是否显示', default=1)
     description = models.TextField(u'描述')
     created_at = models.DateTimeField(u'创建时间', auto_now_add=True, editable=True)
     updated_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
@@ -81,7 +90,7 @@ class Link(models.Model):
     url = models.CharField(u'网址', max_length=256)
     sort = models.PositiveIntegerField(u'排序', default=0)
     is_show = models.BooleanField(u'是否显示', default=1)
-    description = models.TextField(u'描述')
+    description = models.TextField(u'描述', null=True, blank=True)
     created_at = models.DateTimeField(u'创建时间', auto_now_add=True, editable=True)
     updated_at = models.DateTimeField(u'更新时间', auto_now=True, null=True)
 
