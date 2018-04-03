@@ -48,7 +48,7 @@
                     <li class="menu-item current_page_item"><a href="/">首页</a></li>
 
                     {% for foo in nav_list %}
-                    <li class="menu-item "><a href="list">{{ foo.title }}</a>
+                    <li class="menu-item "><a href="/list/{{ foo.id }}">{{ foo.title }}</a>
                         <ul class="sub-menu"></ul>
                     </li>
                     {% endfor %}

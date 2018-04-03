@@ -19,11 +19,60 @@
 <body>
 {% include 'header.html' %}
 
-{% block content %}
+<div class="wrap">
+    {% block content %}
     <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
-{% endblock %}
+    {% endblock %}
+
+    {% include "right.html" %}
+</div>
 
 {% include "footer.html" %}
+
+<script>
+    var s1 = '2016-05-24';//设置为你的建站时间
+    s1 = new Date(s1.replace(/-/g, "/"));
+    s2 = new Date();
+    var days = s2.getTime() - s1.getTime();
+    var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+    document.getElementById('days').innerHTML = number_of_days;
+</script>
+<script type="text/javascript">
+    function NewDate(str) {
+        str = str.split('-');
+        var date = new Date();
+
+        date.setUTCHours(0, 0, 0, 0);
+        return date;
+    }
+
+    function showsectime() {
+        var birthDay = NewDate("2016-05-29");
+        var today = new Date();
+        var timeold = today.getTime() - birthDay.getTime();
+        var sectimeold = timeold / 1000
+        var secondsold = Math.floor(sectimeold);
+        var msPerDay = 24 * 60 * 60 * 1000;
+        var e_daysold = timeold / msPerDay;
+        var daysold = Math.floor(e_daysold);
+        var e_hrsold = (daysold - e_daysold) * -24;
+        var hrsold = Math.floor(e_hrsold);
+        var e_minsold = (hrsold - e_hrsold) * -60;
+        var minsold = Math.floor((hrsold - e_hrsold) * -60);
+        var seconds = Math.floor((minsold - e_minsold) * -60).toString();
+        document.getElementById("bignum").innerHTML = daysold;
+        setTimeout(showsectime, 1000);
+    }
+
+    showsectime();
+</script>
+<script type="text/javascript">
+    var a = 1;
+    var b = 6;
+    var c = 2;
+    var las_number = a + b + c;
+    document.getElementById("bignum1").innerHTML = Number(a) + Number(b) + Number(c);
+</script>
 
 </body>
 </html>

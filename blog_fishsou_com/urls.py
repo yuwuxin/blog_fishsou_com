@@ -21,7 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.index),
-    path('list', views.list),
+    path('list/<int:c_id>', views.list),
     # path('article', views.article),
     path('article-<int:id>.html', views.article),
     path('about', views.about),
