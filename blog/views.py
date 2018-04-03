@@ -1,22 +1,27 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from blog.models import Article
+from blog.models import Category
+from blog.models import AdPosition
 
 
 # Create your views here.
 def index(request):
-    title = Article.objects.get(id='')
-    return render(request, 'index.html', {'title': title})
+    nav_list = Category.objects.all()
+    banner_list = AdPosition.objects.all()
+    return render(request, 'index.html', {'nav_list': nav_list, 'banner_list': banner_list})
 
 
 def list(request):
-    return render(request, 'list.html')
+    nav_list = Category.objects.all()
+    return render(request, 'list.html', {'nav_list': nav_list})
 
 
 def article(request, id):
     print(id)
-    return render(request, 'detail.html')
+    nav_list = Category.objects.all()
+    return render(request, 'detail.html', {'nav_list': nav_list})
 
 
 def about(request):
-    return render(request, 'about.html')
+    nav_list = Category.objects.all()
+    return render(request, 'about.html', {'nav_list': nav_list})

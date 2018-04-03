@@ -1,17 +1,33 @@
-{% extends 'base.html' %}
-{% block content %}
-    <div class="wrap">
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>{% block title %}创世博客{% endblock %}</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="order by dede58.com" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="static/images/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="{% static "css/style.css" %}" />
+<link rel="stylesheet" type="text/css"  href="static/css/font-awesome.min.css"/>
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="static/js/yycm.js"></script>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="wrap">
   <div class="main">
     <div class="screen">
       <div class="slide_container">
         <ul class="rslides" id="slider">
-            {% for foo in banner_list %}
-                <li> <a href="article" target="_blank"><img src="{{ foo.cover_img }}"></a> </li>
-            {% endfor %}
-          {% comment %}<li> <a href="article" target="_blank"><img src="static/images/bigpic01.jpg"></a> </li>
+          <li> <a href="article" target="_blank"><img src="static/images/bigpic01.jpg"></a> </li>
           <li> <a href="article" target="_blank"><img src="static/images/bigpic02.jpg"></a> </li>
           <li> <a href="article" target="_blank"><img src="static/images/bigpic03.jpg"></a> </li>
-          <li> <a href="article" target="_blank"><img src="static/images/bigpic04.jpg"></a> </li>{% endcomment %}
+          <li> <a href="article" target="_blank"><img src="static/images/bigpic04.jpg"></a> </li>
         </ul>
       </div>
     </div>
@@ -206,4 +222,8 @@ var c = 2;
 var las_number = a + b+ c;
 document.getElementById("bignum1").innerHTML = Number(a) + Number(b)+ Number(c);
 </script> </div>
-{% endblock %}
+
+{% include "footer.html"%}
+
+</body>
+</html>

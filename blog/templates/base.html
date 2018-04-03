@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{% block title %}创世博客{% endblock %}</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="order by dede58.com"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="static/images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{% static "css/style.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="static/js/yycm.js"></script>
+</head>
+<body>
+{% include 'header.html' %}
+
+{% block content %}
+    <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
+{% endblock %}
+
+{% include "footer.html" %}
+
+</body>
+</html>
