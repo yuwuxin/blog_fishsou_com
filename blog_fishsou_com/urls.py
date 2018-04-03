@@ -26,4 +26,6 @@ urlpatterns = [
     path('article-<int:id>.html', views.article),
     path('about', views.about),
     path('admin/', admin.site.urls),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+# +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
