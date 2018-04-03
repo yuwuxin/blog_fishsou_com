@@ -9,9 +9,10 @@ from blog.models import Article
 def index(request):
     nav_list = Category.objects.all()
     banner_list = AdPosition.objects.all()
+    article_list = Article.objects.all()
 
     return render(request, 'index.html',
-                  {'nav_list': nav_list, 'banner_list': banner_list})
+                  {'nav_list': nav_list, 'banner_list': banner_list, 'article_list': article_list})
 
 
 def list(request, c_id):
