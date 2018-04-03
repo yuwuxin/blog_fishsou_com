@@ -5,7 +5,7 @@ import django
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(u'标题', max_length=150)
-    cover_img = models.ImageField(u'图片封面', upload_to='img/%Y/%m/%d', max_length=200, default='', null=True)
+    cover_img = models.ImageField(u'图片封面', upload_to='images/%Y/%m/%d', max_length=200, default='', null=True)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, default=1)
     click_count = models.PositiveIntegerField(u'点击数', default=0)
     user = models.ForeignKey('Member', on_delete=models.CASCADE, default=1)
@@ -61,7 +61,7 @@ class Member(models.Model):
 
 class AdPosition(models.Model):
     title = models.CharField(u'名称', max_length=256)
-    cover_img = models.ImageField(u'广告图', upload_to='img/%Y/%m/%d', max_length=200, default='', null=True)
+    cover_img = models.ImageField(u'广告图', upload_to='images/%Y/%m/%d', max_length=200, default='', null=True)
     sort = models.PositiveIntegerField(u'排序', default=0)
     is_show = models.BooleanField(u'是否显示', default=1)
     description = models.TextField(u'描述')
@@ -74,7 +74,7 @@ class AdPosition(models.Model):
 
 class Tag(models.Model):
     title = models.CharField(u'名称', max_length=256)
-    cover_img = models.ImageField(u'封面', upload_to='img/%Y/%m/%d', max_length=200, default='', null=True)
+    cover_img = models.ImageField(u'封面', upload_to='images/%Y/%m/%d', max_length=200, default='', null=True)
     sort = models.PositiveIntegerField(u'排序', default=0)
     is_show = models.BooleanField(u'是否显示', default=1)
     description = models.TextField(u'描述')

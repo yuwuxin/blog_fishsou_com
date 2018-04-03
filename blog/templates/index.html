@@ -6,12 +6,8 @@
       <div class="slide_container">
         <ul class="rslides" id="slider">
             {% for foo in banner_list %}
-                <li> <a href="article" target="_blank"><img src="{{ foo.cover_img }}"></a> </li>
+                <li> <a href="article" target="_blank"><img src="uploads/{{ foo.cover_img }}"></a> </li>
             {% endfor %}
-          {% comment %}<li> <a href="article" target="_blank"><img src="static/images/bigpic01.jpg"></a> </li>
-          <li> <a href="article" target="_blank"><img src="static/images/bigpic02.jpg"></a> </li>
-          <li> <a href="article" target="_blank"><img src="static/images/bigpic03.jpg"></a> </li>
-          <li> <a href="article" target="_blank"><img src="static/images/bigpic04.jpg"></a> </li>{% endcomment %}
         </ul>
       </div>
     </div>
