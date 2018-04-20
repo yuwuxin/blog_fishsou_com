@@ -5,16 +5,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>{% block title %}创世博客{% endblock %}</title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <meta name="author" content="order by dede58.com"/>
+    <meta name="description" content="创世博客"/>
+    <meta name="keywords" content="创世博客"/>
+    <meta name="author" content="order by blog_fishsou_com"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="static/images/favicon.ico"/>
+    <link rel="shortcut icon" href="{% static "" %}static/images/favicon.ico"/>
     <link rel="stylesheet" type="text/css" media="all" href="{% static "css/style.css" %}"/>
-    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css"/>
-    <script type="text/javascript" src="static/js/jquery.min.js"></script>
-    <script type="text/javascript" src="static/js/responsiveslides.min.js"></script>
-    <script type="text/javascript" src="static/js/yycm.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "/css/font-awesome.min.css" %}"/>
+    <script type="text/javascript" src="{% static "/js/jquery.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "/js/responsiveslides.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "/js/yycm.js" %}"></script>
 </head>
 <body>
 {% include 'header.html' %}

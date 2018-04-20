@@ -1,3 +1,5 @@
+{% load static %}
+
 <div class="top"><span href="#" class="totop"></span>
     <div class="topmenu">
         <ul id="menu-top" class="wrap">
@@ -5,9 +7,9 @@
         </ul>
     </div>
     <div class="wrap page-header">
-        <h1 style="margin-top: 20px;"><a href="/" title="主页"><img src="static/images/logo.png" width="" height=""
+        <h1 style="margin-top: 20px;"><a href="/" title="主页"><img src="{% static "/images/logo.png" %}" width="" height=""
                                                                   border="0" alt=""></a></h1>
-        <span>我的网站，可以后台设置此处文字！</span>
+        <span>找到您想学习的编程技术，分享和交流!</span>
         <div class="contact">
             <li><a href="#" target="_blank" title="订阅本站"><i class="fa fa-rss fa-2x"></i></a></li>
             <li><a href="http://wpa.qq.com/msgrd?v=3&uin=1943759704&site=qq&menu=yes" target="_blank" title="QQ联系"><i

@@ -83,7 +83,6 @@ admin.site.register(Message)
 class TagAdmin(admin.ModelAdmin):
     list_display = (
         'title',
-        'cover_img',
         'sort',
         'is_show',
         'created_at'
@@ -96,6 +95,7 @@ admin.site.register(Tag, TagAdmin)
 class LinkAdmin(admin.ModelAdmin):
     list_display = (
         'title',
+        'cover_img',
         'url',
         'sort',
         'is_show',

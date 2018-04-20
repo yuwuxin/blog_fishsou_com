@@ -77,14 +77,23 @@ DATABASES = {
     #     'NAME': os.path.join(BASE_DIR, 'blogDB.db'),
     # }
 
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'blog_fishsou_com',
+    #     'USER': 'root',
+    #     'PASSWORD': 'sbtey@lb0629',
+    #     'HOST': '121.42.194.60',
+    #     'PORT': '3306',
+    # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog_fishsou_com',
         'USER': 'root',
-        'PASSWORD': 'sbtey@lb0629',
-        'HOST': '121.42.194.60',
+        'PASSWORD': 'dev2312',
+        'HOST': '127.0.0.01',
         'PORT': '3306',
     }
+
 }
 
 # Password validation

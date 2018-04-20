@@ -5,7 +5,7 @@
             <div class="slide_container">
                 <ul class="rslides" id="slider">
                     {% for foo in banner_list %}
-                        <li><a href="article" target="_blank"><img src="uploads/{{ foo.cover_img }}"></a></li>
+                        <li><a href="/article-2.html" target="_blank"><img src="/uploads/{{ foo.cover_img }}"></a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -14,16 +14,16 @@
         <div class="block">
             <h2>
                 <span class="category">
-                    <a href="detail.html" rel="category tag">{{ foo.category }}</a><i class="fa fa-caret-right"></i>
+                    <a href="/article-{{ foo.id }}.html" rel="category tag">{{ foo.category }}</a><i class="fa fa-caret-right"></i>
                 </span>
-                <a href="article-{{ foo.id }}.html" target="_ablank">{{ foo.title }}</a>
+                <a href="/article-{{ foo.id }}.html" target="_ablank">{{ foo.title }}</a>
             </h2>
             <div class="clear"></div>
 
             {% if foo.cover_img %}
             <div class='viewimg'>
-                <a href='article-{{ foo.id }}.html' title='{{ foo.title }}' target='_ablank' class='ipic'>
-                    <img src='uploads/{{ foo.cover_img }}' alt='{{ foo.title }}' class='thumbnail'/><span class='shine' style='background-position: 160px 50%;'> </span>
+                <a href='/article-{{ foo.id }}.html' title='{{ foo.title }}' target='_ablank' class='ipic'>
+                    <img src='/uploads/{{ foo.cover_img }}' alt='{{ foo.title }}' class='thumbnail'/><span class='shine' style='background-position: 160px 50%;'> </span>
                 </a>
             </div>
             {% endif %}
