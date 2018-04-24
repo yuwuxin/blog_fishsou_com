@@ -3,7 +3,7 @@
 <div class="top"><span href="#" class="totop"></span>
     <div class="topmenu">
         <ul id="menu-top" class="wrap">
-            <li><a>您好！欢迎来到我的博客！{{ title }}</a></li>
+            <li><a>您好！欢迎来到我的博客！</a></li>
         </ul>
     </div>
     <div class="wrap page-header">
@@ -49,11 +49,12 @@
                 <ul>
                     <li class="menu-item current_page_item"><a href="/">首页</a></li>
 
-                    {% for foo in nav_list %}
+                    {% for foo in nav %}
                     <li class="menu-item "><a href="/list/{{ foo.id }}">{{ foo.title }}</a>
                         <ul class="sub-menu"></ul>
                     </li>
                     {% endfor %}
+                    <li class="menu-item "><a href="/about.html">关于博主</a></li>
                 </ul>
             </div>
         </div>
