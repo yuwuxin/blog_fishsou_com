@@ -4,35 +4,14 @@
     <div class="article">
       <div class="map"><span> 当前位置：<a href='/'>主页</a> > <a href='/cms/'>Cms文章</a> > 正文 </span> </div>
       <div class="title">
-        <h1>Dede两句代码增加自定义属性</h1>
-        <div class="subtitle"> <span><i class="fa fa-clock-o"></i>06-05</span><span><i class="fa fa-eye"></i> <script src="/plus/count.php?view=yes&aid=12&mid=1"type='text/javascript' language="javascript"></script></span><span><i class="fa fa-folder-o"></i> <a href="" rel="category tag">Cms文章</a> </span><span> <i class="fa fa-tags"></i> </span> </div>
+        <h1>{{ article.title }}</h1>
+        <div class="subtitle"> <span><i class="fa fa-clock-o"></i>{{ article.created_at|date:'Y-m-d :H:i:s' }}</span><span><i class="fa fa-eye"></i> <script src="/plus/count.php?view=yes&aid=12&mid=1"type='text/javascript' language="javascript"></script></span><span><i class="fa fa-folder-o"></i> <a href="" rel="category tag">{{ article.category_id }}</a> </span><span> <i class="fa fa-tags"></i> </span> </div>
       </div>
       <div class="subblock">
         <script src=/d/js/acmsd/thea6.js></script>
       </div>
       <div class="article_content">
-        <p><p>&nbsp;<span style="color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px; text-indent: 30px;">Dede网站频道变多之后都会发觉默认的几个自定义属性不够用了，想自己增加自定义属性。今天就为大家提供自定义属性的SQL语句。</span></p>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第一步：在DEDECMS后台左栏点击&ldquo;系统&rdquo;；</div>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第二步：选择&ldquo;系统&rdquo;菜单下的&ldquo;SQL命令行工具&rdquo;；</div>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第三步：输入如下代码点击执行：</div>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
-<pre style="box-sizing: border-box; font-family: 'courier new'; font-size: 12px; width: 724.672px; margin-top: 20px; margin-bottom: 20px; padding-right: 20px; padding-left: 20px; line-height: 20px; color: rgb(248, 248, 212); word-wrap: break-word; border: none; border-radius: 4px; font-stretch: normal;"><ol class="dp-xml" style="box-sizing: border-box; margin-bottom: 30px; margin-left: 10px; border-left-color: rgb(255, 95, 83); color: rgb(92, 92, 92);"><li class="alt" style="box-sizing: border-box; color: rgb(255, 255, 255);"><span style="box-sizing: border-box;">insert&nbsp;into&nbsp;`dede_arcatt`(sortid,att,attname)&nbsp;values(9,'d','特推');&nbsp;&nbsp;</span></li></ol></pre>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">第四步：在输入点击执行：</div>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">&nbsp;</div>
-<pre style="box-sizing: border-box; font-family: 'courier new'; font-size: 12px; width: 724.672px; margin-top: 20px; margin-bottom: 20px; padding-right: 20px; padding-left: 20px; line-height: 20px; color: rgb(248, 248, 212); word-wrap: break-word; border: none; border-radius: 4px; font-stretch: normal;"><ol class="dp-xml" style="box-sizing: border-box; margin-bottom: 30px; margin-left: 10px; border-left-color: rgb(255, 95, 83); color: rgb(92, 92, 92);"><li class="alt" style="box-sizing: border-box; color: rgb(255, 255, 255);"><span style="box-sizing: border-box;">alter&nbsp;table&nbsp;`dede_archives`&nbsp;modify&nbsp;`flag`&nbsp;set&nbsp;('h','c','p','f','s','j','a','b','d')&nbsp;default&nbsp;NULL;&nbsp;&nbsp;</span></li></ol></pre>
-<div style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 27px;">
-<div style="box-sizing: border-box;">&nbsp;</div>
-<div style="box-sizing: border-box;">需要说明的是：</div>
-<div style="box-sizing: border-box;">&nbsp;</div>
-<div style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp;代码第1行：values(9,'d','特推') 是根据我们需要自行定义的，其中9是sortid的值，是不可重复的，也就是每添加一个自定义属性，sortid的值就应该递增到10,11,12...，以此类推！d是alt的值，是自定义属性的标记，与已存在的标记符号不能重复，例如已存在&lsquo;p'属性了，就不能再用&rsquo;p&lsquo;或者&rsquo;po&lsquo;之类的，一个字符都不能重复，否则操作的时候会出现重复属性。&ldquo;评论&rdquo;是中文名称，是方便人们直观地勒戒自定义属性的含义的，可以根据需要改为&ldquo;网络&rdquo;、&ldquo;新闻头条&rdquo;等。</div>
-<div style="box-sizing: border-box;">&nbsp;</div>
-<div style="box-sizing: border-box;">&nbsp; &nbsp; &nbsp; &nbsp;代码第2行：set ('c','h','p','f','s','j','a','b','d')，括号中的字母对应已存在的标记符号和您需要添加的标记符号，并按顺序录入，不得改变先后顺序。例如，d排序第9位，则对应第一行代码中添加的自定义属性&ldquo;&ldquo;特推d&rdquo;。</div>
-<div style="box-sizing: border-box;">&nbsp;</div>
-<div style="box-sizing: border-box;">提示：如果要修改自定义属性的提示，可以在系统---&gt;自定义属性中修改。</div>
-</div></p>
+          {{ article.content }}
       </div>
       <div class='pagination'></div>
       <div class="subblock">
@@ -47,7 +26,7 @@
     <div class="clear"></div>
     <div class="con_pretext">
       <ul>
-        <li class="first">上一篇：<a href='/cms/11.html'>Dede简单搬家</a>  </li>
+        <li class="first">上一篇：<a href='#'>Dede简单搬家</a>  </li>
         <li class="last">下一篇：没有了 </li>
       </ul>
     </div>

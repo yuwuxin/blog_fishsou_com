@@ -7,27 +7,23 @@ from blog.models import Article
 
 # Create your views here.
 def index(request):
-    nav_list = Category.objects.all()
     banner_list = AdPosition.objects.all()
-    article_list = Article.objects.all()
+    article_list = Article.objects.all().order_by('-id')
 
     return render(request, 'index.html',
-                  {'nav_list': nav_list, 'banner_list': banner_list, 'article_list': article_list})
+                  {'banner_list': banner_list, 'article_list': article_list})
 
 
 def list(request, c_id):
-    nav_list = Category.objects.all()
-    article_list = Article.objects.filter(category_id=c_id)
+    article_list = Article.objects.filter(category_id=c_id).order_by('-id')
 
-    return render(request, 'list.html', {'nav_list': nav_list, 'article_list': article_list})
+    return render(request, 'list.html', {'article_list': article_list})
 
 
 def article(request, id):
-    print(id)
-    nav_list = Category.objects.all()
-    return render(request, 'detail.html', {'nav_list': nav_list})
+    article = Article.objects.filter(id=id)[0]
+    return render(request, 'detail.html', {'article': article})
 
 
 def about(request):
-    nav_list = Category.objects.all()
-    return render(request, 'about.html', {'nav_list': nav_list})
+    return render(request, 'about.html')
