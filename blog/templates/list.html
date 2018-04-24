@@ -27,12 +27,14 @@
                 <span><i class="fa fa-clock-o"></i> {{ foo.created_at|date:"Y-m-d H:i:s" }} </span>
                 <span><i class="fa fa-comment-o"></i> <a href="article" class="ds-thread-count" data-thread-key="156">暂无评论</a> </span>
                 <span><i class="fa fa-eye"></i> {{ foo.click_count }} </span><span> </span>
-                <span class="more"><a href="article-{{ foo.id }}.html" title="{{ foo.title }}">阅读详情</a></span>
+                <span class="more"><a href="/article-{{ foo.id }}.html" title="{{ foo.title }}">阅读详情</a></span>
             </div>
         </div>
         {% endfor %}
     <div class='pagination'>&nbsp;<li><span class="pageinfo">共 <strong>1</strong>页<strong>6</strong>条记录</span></li>
 </div>
   </div>
+
+    {% include "widgets/right.html" %}
 {% endblock %}
 

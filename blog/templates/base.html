@@ -25,14 +25,12 @@
     {% block content %}
     <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
     {% endblock %}
-
-    {% include "widgets/right.html" %}
 </div>
 
 {% include "widgets/footer.html" %}
 
 <script>
-    var s1 = '2016-05-24';//设置为你的建站时间
+    var s1 = '2018-03-23';//设置为你的建站时间
     s1 = new Date(s1.replace(/-/g, "/"));
     s2 = new Date();
     var days = s2.getTime() - s1.getTime();
@@ -49,7 +47,7 @@
     }
 
     function showsectime() {
-        var birthDay = NewDate("2016-05-29");
+        var birthDay = NewDate("2018-03-23");
         var today = new Date();
         var timeold = today.getTime() - birthDay.getTime();
         var sectimeold = timeold / 1000
