@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load blog_widget %}
 {% block content %}
     <div class="main">
     <div class="map1"> <span> 当前位置：<a href='/'>主页</a> > <a href='/cms/'>Cms文章</a> >
@@ -34,7 +35,6 @@
     <div class='pagination'>&nbsp;<li><span class="pageinfo">共 <strong>1</strong>页<strong>6</strong>条记录</span></li>
 </div>
   </div>
-
-    {% include "widgets/right.html" %}
+    {% pub_sidebar %}
 {% endblock %}
 

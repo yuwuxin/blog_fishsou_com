@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
+{% load blog_widget %}
 {% block content %}
   <div class="main">
     <div class="article">
-      <div class="map"><span> 当前位置：<a href='/'>主页</a> > <a href='/cms/'>Cms文章</a> > 正文 </span> </div>
+      <div class="map"><span> 当前位置：<a href='/'>主页</a> > <a href='#'>Cms文章</a> > 正文 </span> </div>
       <div class="title">
         <h1>{{ article.title }}</h1>
-        <div class="subtitle"> <span><i class="fa fa-clock-o"></i>{{ article.created_at|date:'Y-m-d :H:i:s' }}</span><span><i class="fa fa-eye"></i> <script src="/plus/count.php?view=yes&aid=12&mid=1"type='text/javascript' language="javascript"></script></span><span><i class="fa fa-folder-o"></i> <a href="" rel="category tag">{{ article.category_id }}</a> </span><span> <i class="fa fa-tags"></i> </span> </div>
+        <div class="subtitle"> <span><i class="fa fa-clock-o"></i>{{ article.created_at|date:'Y-m-d :H:i:s' }}</span><span><i class="fa fa-eye"></i> <script src="/plus/count.php?view=yes&aid=12&mid=1"type='text/javascript' language="javascript"></script></span><span><i class="fa fa-folder-o"></i> <a href="#" rel="category tag">{{ article.category }}</a> </span><span> <i class="fa fa-tags"></i> </span> </div>
       </div>
       <div class="subblock">
         <script src=/d/js/acmsd/thea6.js></script>
       </div>
       <div class="article_content">
+          {% autoescape off %}
           {{ article.content }}
+          {% endautoescape %}
       </div>
       <div class='pagination'></div>
       <div class="subblock">
         <script src=/d/js/acmsd/thea8.js></script>
       </div>
       <div class="postcopyright">
-        <p><strong>版权保护: </strong> 本文由 主页 原创，转载请保留链接: <a href="/cms/12.html" title="Dede两句代码增加自定义属性"> /cms/12.html</a></p>
+        <p><strong>版权保护: </strong> 本文由 主页 原创，转载请保留链接: <a href="/article-{{ article.id }}.html" title="{{ article.title }}"> /article-{{ article.id }}.html</a></p>
       </div>
       <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
       <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","qzone","tsina","bdysc","weixin","renren","tqq","tieba","douban","bdhome","sqq","mail","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
@@ -32,7 +35,5 @@
     </div>
     <div class="clear"></div>
   </div>
-
-    {% include "widgets/right.html" %}
-
+    {% pub_sidebar %}
 {% endblock %}

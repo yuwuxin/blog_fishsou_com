@@ -1,0 +1,56 @@
+{% load static %}
+
+<div class="sider">
+  <div class="right">
+    <div class="author">
+      <div class="topauthor"> <img alt="" src="{% static "/images/avatar5.jpg" %}" class="avatar avatar-100 photo" height="100" width="100"> <span class="intag">博客主人</span><span class="names">LiHang</span></br>
+        <span class="talk"> 座右铭：一个人在做事的时候并不一定要做很多事情，但是自己每做一件事都要把这件事做好。 </span> </div>
+      <span class="bot"></span> </div>
+    <div class="butauthor author">
+      <li> <span class="bignum" ID="bignum1"></span>文章总数 </li>
+      <li> <span class="bignum">1330</span>访问次数 </li>
+      <li> <span class="bignum" ID="days"></span>建站天数 </li>
+    </div>
+    <div class="subblock"> <img src="{% static "/images/2686220_aBzbR_bi.jpg" %}"> </div>
+    <div class="subblock">
+      <h3>推荐文章</h3>
+      <ul>
+            {% for foo in recommend_list %}
+              <li>
+                <div class="sideshow"><a href="/article-{{ foo.id }}.html" target="_ablank"  title="{{ foo.title }}">  </a> <a href="/article-{{ foo.id }}.html" target="_ablank"  title="{{ foo.title }}"> {{ foo.title }} </a> <span class="datetime"> {{ foo.created_at|date:'Y/m/d' }} </span> </div>
+              </li>
+            {% endfor %}
+      </ul>
+    </div>
+    <div class="subblock"> <img src="{% static "/images/2860368_NgrVa_bi.png" %}"> </div>
+    <div class="subblock">
+      <h3>热门文章</h3>
+      <ul>
+        {% for foo in hot_list %}
+            <li>
+                <div class="sideshow"><a href="/article-{{ foo.id }}.html" target="_ablank"  title="{{ foo.title }}">  </a> <a href="/article-{{ foo.id }}.html" target="_ablank"  title="{{ foo.title }}"> {{ foo.title }} </a> <span class="datetime"> {{ foo.created_at|date:'Y/m/d' }} </span> </div>
+            </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="subblock"> <img src="{% static "/images/3630068_xAnXj_bi.jpg" %}"> </div>
+    <div class="subblock">
+      <h3>标签</h3>
+      <ul class="tag_cloud">
+          {% for foo in tag_list %}
+              <a href="#"  target="_blank" title="{{ foo.title }}" class="tag-link-9" >{{ foo.title }}</a>
+          {% endfor %}
+      </ul>
+    </div>
+    <div class="subblock linkcat">
+      <h3>友情链接</h3>
+      <ul>
+        {% for foo in link_list %}
+            <li><a href='{{ foo.url }}' target='_blank'>{{ foo.title }}</a> </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <ul class="widgets">
+    </ul>
+  </div>
+</div>

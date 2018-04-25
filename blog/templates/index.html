@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load blog_widget %}
 {% block content %}
     <div class="main">
         <div class="screen">
@@ -11,37 +12,35 @@
             </div>
         </div>
         {% for foo in article_list %}
-        <div class="block">
-            <h2>
+            <div class="block">
+                <h2>
                 <span class="category">
-                    <a href="/article-{{ foo.id }}.html" rel="category tag">{{ foo.category }}</a><i class="fa fa-caret-right"></i>
+                    <a href="/article-{{ foo.id }}.html" rel="category tag">{{ foo.category }}</a><i
+                        class="fa fa-caret-right"></i>
                 </span>
-                <a href="/article-{{ foo.id }}.html" target="_ablank">{{ foo.title }}</a>
-            </h2>
-            <div class="clear"></div>
-
-            {% if foo.cover_img %}
-            <div class='viewimg'>
-                <a href='/article-{{ foo.id }}.html' title='{{ foo.title }}' target='_ablank' class='ipic'>
-                    <img src='/uploads/{{ foo.cover_img }}' alt='{{ foo.title }}' class='thumbnail'/><span class='shine' style='background-position: 160px 50%;'> </span>
-                </a>
+                    <a href="/article-{{ foo.id }}.html" target="_ablank">{{ foo.title }}</a>
+                </h2>
+                <div class="clear"></div>
+                {% if foo.cover_img %}
+                    <div class='viewimg'>
+                        <a href='/article-{{ foo.id }}.html' title='{{ foo.title }}' target='_ablank' class='ipic'>
+                            <img src='/uploads/{{ foo.cover_img }}' alt='{{ foo.title }}' class='thumbnail'/><span
+                                class='shine' style='background-position: 160px 50%;'> </span>
+                        </a>
+                    </div>
+                {% endif %}
+                <div class="preview">{{ foo.description }}</div>
+                <div class="preem">
+                    <span><i class="fa fa-clock-o"></i> {{ foo.created_at|date:"Y-m-d H:i:s" }} </span>
+                    <span><i class="fa fa-comment-o"></i> <a href="article" class="ds-thread-count"
+                                                             data-thread-key="156">暂无评论</a> </span>
+                    <span><i class="fa fa-eye"></i> {{ foo.click_count }} </span><span> </span>
+                    <span class="more"><a href="/article-{{ foo.id }}.html" title="{{ foo.title }}">阅读详情</a></span>
+                </div>
             </div>
-            {% endif %}
-
-            <div class="preview">{{ foo.description }}</div>
-            <div class="preem">
-                <span><i class="fa fa-clock-o"></i> {{ foo.created_at|date:"Y-m-d H:i:s" }} </span>
-                <span><i class="fa fa-comment-o"></i> <a href="article" class="ds-thread-count" data-thread-key="156">暂无评论</a> </span>
-                <span><i class="fa fa-eye"></i> {{ foo.click_count }} </span><span> </span>
-                <span class="more"><a href="/article-{{ foo.id }}.html" title="{{ foo.title }}">阅读详情</a></span>
-            </div>
-        </div>
         {% endfor %}
-
         <div class='pagination'>&nbsp;&nbsp;<a href="/cms/">点击查看更多</a> &nbsp;</div>
     </div>
-
-    {% include "widgets/right.html" %}
-
+    {% pub_sidebar %}
 {% endblock %}
 
